@@ -1,0 +1,16 @@
+{
+  "name": "itkutubxona",
+  "version": "1.0.0",
+  "description": "IT books",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "mongoose": "^6.1.0",
+    "node-telegram-bot-api": "^0.55.0"
+  }
+}
