@@ -1,5 +1,5 @@
 const TelegramBot = require('node-telegram-bot-api')
-const { token, admin } = require('./config')
+const { token, adminId } = require('./config')
 const mongo = require('./db')
 const books = require('./helpers/books')
 const { hello_text, last_text, menu_text, front_text, back_text, graph_text, topics_text, all_topics, comment_text, statistic_text } = require('./helpers/lang')
@@ -39,7 +39,7 @@ bot.on('message', async (message) => {
             })
             
         }
-        if (message.reply_to_message && userId == admin) {
+        if (message.reply_to_message && userId == adminId) {
              if(message.reply_to_message.document && message.text != 'reklama'){
                 const topics = all_topics()
                 const topic = topics.find(topic=> topic.toLowerCase() == message.text.toLowerCase())
